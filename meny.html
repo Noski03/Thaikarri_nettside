@@ -1,0 +1,1083 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meny & Bestilling | Thaikarri</title>
+    <link rel="stylesheet" href="felles.css" />
+    <link rel="stylesheet" href="meny.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav-container">
+        <a href="index.html" class="logo-link">
+          <div class="logo-wrapper">
+            <img src="logo.png" alt="Thaikarri Logo" class="header-logo" />
+            <h1>THAIKARRI</h1>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Hjem</a></li>
+          <li><a href="meny.html">Meny & Bestilling</a></li>
+          <li><a href="catering.html">Catering</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="meny-layout">
+      <section class="meny-seksjon">
+        <h2>Vår Meny</h2>
+        <p class="meny-info">
+          Velg retter under for å regne ut totalpris automatisk før du ringer
+          inn.
+        </p>
+
+        <div class="filter-tags">
+          <button class="filter-btn active" onclick="filterMeny('alle')">
+            Alle
+          </button>
+          <button class="filter-btn" onclick="filterMeny('smaretter')">
+            Småretter
+          </button>
+          <button class="filter-btn" onclick="filterMeny('barn')">
+            Barnemeny
+          </button>
+          <button class="filter-btn" onclick="filterMeny('hovedretter')">
+            Hovedretter
+          </button>
+          <button class="filter-btn" onclick="filterMeny('sunnere')">
+            Sunnere valg
+          </button>
+        </div>
+
+        <div class="meny-grid">
+          <div class="meny-kort" data-kategori="smaretter">
+            <img
+              src="Nr.-1.jpg"
+              alt="Nr. 1 Kylling vårruller"
+              class="rett-bilde"
+            />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>1. Kylling vårruller</h3>
+                <span class="pris">57,-</span>
+              </div>
+              <p class="allergener">Allergener: Hvete</p>
+              <button
+                class="btn-sm"
+                onclick="leggTil('1. Kylling vårruller', 57)"
+              >
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="smaretter">
+            <img
+              src="Nr.-2.jpg"
+              alt="Nr. 2 Innbakt kyllingspyd"
+              class="rett-bilde"
+            />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>2. Innbakt kyllingspyd</h3>
+                <span class="pris">72,-</span>
+              </div>
+              <p class="allergener">Allergener: Hvete, egg</p>
+              <button
+                class="btn-sm"
+                onclick="leggTil('2. Innbakt kyllingspyd', 72)"
+              >
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="smaretter">
+            <img
+              src="Nr.-3.jpg"
+              alt="Nr. 3 Innbakt scampi"
+              class="rett-bilde"
+            />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>3. Innbakt scampi</h3>
+                <span class="pris">72,-</span>
+              </div>
+              <p class="allergener">Allergener: Hvete, egg, skalldyr</p>
+              <button class="btn-sm" onclick="leggTil('3. Innbakt scampi', 72)">
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="smaretter">
+            <img src="Nr.-4.jpg" alt="Nr. 4 Kylling satay" class="rett-bilde" />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>4. Kylling satay</h3>
+                <span class="pris">59,-</span>
+              </div>
+              <p class="allergener">Allergener: Peanøtter</p>
+              <button class="btn-sm" onclick="leggTil('4. Kylling satay', 59)">
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="smaretter">
+            <img
+              src="Nr.-5.jpg"
+              alt="Nr. 5 Wonton m. kylling"
+              class="rett-bilde"
+            />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>5. Wonton m. kylling (7stk.)</h3>
+                <span class="pris">49,-</span>
+              </div>
+              <p class="allergener">Allergener: Hvete</p>
+              <button
+                class="btn-sm"
+                onclick="leggTil('5. Wonton m. kylling', 49)"
+              >
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="smaretter">
+            <img
+              src="Nr.-6.jpg"
+              alt="Nr. 6 Grillspyd av svin"
+              class="rett-bilde"
+            />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>6. Grillspyd av svin</h3>
+                <span class="pris">72,-</span>
+              </div>
+              <p class="allergener">Allergener: Peanøtter</p>
+              <button
+                class="btn-sm"
+                onclick="leggTil('6. Grillspyd av svin', 72)"
+              >
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="smaretter">
+            <img src="Nr.-7.jpg" alt="Nr. 7 Rekechips" class="rett-bilde" />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>7. Rekechips</h3>
+                <span class="pris">39,-</span>
+              </div>
+              <p class="allergener">Allergener: Hvete, skalldyr</p>
+              <button class="btn-sm" onclick="leggTil('7. Rekechips', 39)">
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="smaretter">
+            <img src="Nr.-8.jpg" alt="Nr. 8 Scampi satay" class="rett-bilde" />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>8. Scampi satay</h3>
+                <span class="pris">72,-</span>
+              </div>
+              <p class="allergener">Allergener: Peanøtter, skalldyr</p>
+              <button class="btn-sm" onclick="leggTil('8. Scampi satay', 72)">
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="smaretter">
+            <img src="Nr.-10.jpg" alt="Nr. 10 Samosa" class="rett-bilde" />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>10. Samosa</h3>
+                <span class="pris">39,-</span>
+              </div>
+              <p class="allergener">Allergener: Hvete</p>
+              <button class="btn-sm" onclick="leggTil('10. Samosa', 39)">
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="smaretter">
+            <img
+              src="Nr.-11.jpg"
+              alt="Nr. 11 Vegetar vårruller"
+              class="rett-bilde"
+            />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>11. Vegetar vårruller</h3>
+                <span class="pris">57,-</span>
+              </div>
+              <p class="allergener">Allergener: Hvete</p>
+              <button
+                class="btn-sm"
+                onclick="leggTil('11. Vegetar vårruller', 57)"
+              >
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="barn">
+            <img
+              src="Nr.-12.jpg"
+              alt="Nr. 12 Østerssaus barn"
+              class="rett-bilde"
+            />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>12. Østerssaus (Barn)</h3>
+                <span class="pris">119,-</span>
+              </div>
+              <p class="allergener">Allergener: Hvete, soya, bløtdyr</p>
+              <button
+                class="btn-sm"
+                onclick="leggTil('12. Østerssaus (Barn)', 119)"
+              >
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="barn">
+            <img
+              src="Nr.-13.jpg"
+              alt="Nr. 13 Stekt ris med kylling barn"
+              class="rett-bilde"
+            />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>13. Stekt ris med kylling (Barn)</h3>
+                <span class="pris">119,-</span>
+              </div>
+              <p class="allergener">Allergener: Soya, egg</p>
+              <button
+                class="btn-sm"
+                onclick="leggTil('13. Stekt ris m/kylling (Barn)', 119)"
+              >
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="barn">
+            <img
+              src="Nr.-14.jpg"
+              alt="Nr. 14 Pad mii barn"
+              class="rett-bilde"
+            />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>14. Pad mii (stekt eggnudler - Barn)</h3>
+                <span class="pris">119,-</span>
+              </div>
+              <p class="allergener">Allergener: Hvete, egg, soya, bløtdyr</p>
+              <button
+                class="btn-sm"
+                onclick="leggTil('14. Pad mii (Barn)', 119)"
+              >
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="barn">
+            <img
+              src="Nr.-15.jpg"
+              alt="Nr. 15 Innbakt kylling"
+              class="rett-bilde"
+            />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>15. Innbakt kylling m/pommes frites</h3>
+                <span class="pris">119,-</span>
+              </div>
+              <p class="allergener">Allergener: Hvete, egg</p>
+              <button
+                class="btn-sm"
+                onclick="leggTil('15. Innbakt kylling barn', 119)"
+              >
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="hovedretter" id="kort-22">
+            <img src="Nr.-22.jpg" alt="Nr. 22 Stekt ris" class="rett-bilde" />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>22. Stekt ris med valgfritt kjøtt</h3>
+                <span class="pris" id="pris-22">199,-</span>
+              </div>
+              <p class="allergener">Allergener: Soya, egg</p>
+              <div class="valg-container">
+                <label>Velg variant: </label>
+                <select id="valg-22" onchange="oppdaterKortPris(22)">
+                  <option value="Kylling/Scampi/Svinekjøtt" data-pris="199">
+                    Kylling / Scampi / Svinekjøtt (199,-)
+                  </option>
+                  <option value="Biff/And/Laks" data-pris="209">
+                    Biff / And / Laks (209,-)
+                  </option>
+                </select>
+              </div>
+              <button
+                class="btn-sm"
+                onclick="leggTilHovedrett(22, '22. Stekt ris')"
+              >
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="hovedretter" id="kort-23">
+            <img
+              src="Nr.-23.jpg"
+              alt="Nr. 23 Basilikum saus"
+              class="rett-bilde"
+            />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>23. Basilikum saus</h3>
+                <span class="pris" id="pris-23">199,-</span>
+              </div>
+              <p class="allergener">Allergener: Hvete, bløtdyr, soya</p>
+              <div class="valg-container">
+                <label>Velg variant: </label>
+                <select id="valg-23" onchange="oppdaterKortPris(23)">
+                  <option value="Kylling/Scampi/Svinekjøtt" data-pris="199">
+                    Kylling / Scampi / Svinekjøtt (199,-)
+                  </option>
+                  <option value="Biff/And/Laks" data-pris="209">
+                    Biff / And / Laks (209,-)
+                  </option>
+                </select>
+              </div>
+              <button
+                class="btn-sm"
+                onclick="leggTilHovedrett(23, '23. Basilikum saus')"
+              >
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="hovedretter" id="kort-24">
+            <img src="Nr.-24.jpg" alt="Nr. 24 Pad thai" class="rett-bilde" />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>24. Pad thai (stekte risnudler)</h3>
+                <span class="pris" id="pris-24">199,-</span>
+              </div>
+              <p class="allergener">Allergener: Hvete, egg, peanøtter</p>
+              <div class="valg-container">
+                <label>Velg variant: </label>
+                <select id="valg-24" onchange="oppdaterKortPris(24)">
+                  <option value="Kylling/Scampi/Svinekjøtt" data-pris="199">
+                    Kylling / Scampi / Svinekjøtt (199,-)
+                  </option>
+                  <option value="Biff/And/Laks" data-pris="209">
+                    Biff / And / Laks (209,-)
+                  </option>
+                </select>
+              </div>
+              <button
+                class="btn-sm"
+                onclick="leggTilHovedrett(24, '24. Pad thai')"
+              >
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="hovedretter" id="kort-25">
+            <img src="Nr.-25.jpg" alt="Nr. 25 Pad mii" class="rett-bilde" />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>25. Pad mii (stekte eggnudler)</h3>
+                <span class="pris" id="pris-25">199,-</span>
+              </div>
+              <p class="allergener">Allergener: Hvete, egg, bløtdyr, soya</p>
+              <div class="valg-container">
+                <label>Velg variant: </label>
+                <select id="valg-25" onchange="oppdaterKortPris(25)">
+                  <option value="Kylling/Scampi/Svinekjøtt" data-pris="199">
+                    Kylling / Scampi / Svinekjøtt (199,-)
+                  </option>
+                  <option value="Biff/And/Laks" data-pris="209">
+                    Biff / And / Laks (209,-)
+                  </option>
+                </select>
+              </div>
+              <button
+                class="btn-sm"
+                onclick="leggTilHovedrett(25, '25. Pad mii')"
+              >
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="hovedretter" id="kort-26">
+            <img
+              src="Nr.-26.jpg"
+              alt="Nr. 26 Tom yam supper"
+              class="rett-bilde"
+            />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>26. Tom yam supper</h3>
+                <span class="pris" id="pris-26">199,-</span>
+              </div>
+              <p class="allergener">Allergener: Sopp, peanøtter</p>
+              <div class="valg-container">
+                <label>Velg variant: </label>
+                <select id="valg-26" onchange="oppdaterKortPris(26)">
+                  <option value="Kylling/Scampi/Svinekjøtt" data-pris="199">
+                    Kylling / Scampi / Svinekjøtt (199,-)
+                  </option>
+                  <option value="Biff/And/Laks" data-pris="209">
+                    Biff / And / Laks (209,-)
+                  </option>
+                </select>
+              </div>
+              <button
+                class="btn-sm"
+                onclick="leggTilHovedrett(26, '26. Tom yam suppe')"
+              >
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="hovedretter" id="kort-27">
+            <img
+              src="Nr.-27.jpg"
+              alt="Nr. 27 Tom kha kyllingsuppe"
+              class="rett-bilde"
+            />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>27. Tom kha kyllingsuppe</h3>
+                <span class="pris" id="pris-27">199,-</span>
+              </div>
+              <p class="allergener">Kylling, kokosmelk, sitrongress</p>
+              <div class="valg-container">
+                <label>Velg variant: </label>
+                <select id="valg-27" onchange="oppdaterKortPris(27)">
+                  <option value="Kylling/Scampi/Svinekjøtt" data-pris="199">
+                    Kylling / Scampi / Svinekjøtt (199,-)
+                  </option>
+                  <option value="Biff/And/Laks" data-pris="209">
+                    Biff / And / Laks (209,-)
+                  </option>
+                </select>
+              </div>
+              <button
+                class="btn-sm"
+                onclick="leggTilHovedrett(27, '27. Tom kha suppe')"
+              >
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="hovedretter" id="kort-28">
+            <img
+              src="Nr.-28.jpg"
+              alt="Nr. 28 Wok med cashewnøtter"
+              class="rett-bilde"
+            />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>28. Wok kylling og cashewnøtter</h3>
+                <span class="pris" id="pris-28">199,-</span>
+              </div>
+              <p class="allergener">
+                Allergener: Hvete, bløtdyr, soya, peanøtter
+              </p>
+              <div class="valg-container">
+                <label>Velg variant: </label>
+                <select id="valg-28" onchange="oppdaterKortPris(28)">
+                  <option value="Kylling/Scampi/Svinekjøtt" data-pris="199">
+                    Kylling / Scampi / Svinekjøtt (199,-)
+                  </option>
+                  <option value="Biff/And/Laks" data-pris="209">
+                    Biff / And / Laks (209,-)
+                  </option>
+                </select>
+              </div>
+              <button
+                class="btn-sm"
+                onclick="leggTilHovedrett(28, '28. Wok m/cashewnøtter')"
+              >
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="hovedretter" id="kort-29">
+            <img src="Nr.-29.jpg" alt="Nr. 29 Sursøt saus" class="rett-bilde" />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>29. Sursøt saus</h3>
+                <span class="pris" id="pris-29">199,-</span>
+              </div>
+              <p class="allergener">Allergener: Hvete, soya, egg</p>
+              <div class="valg-container">
+                <label>Velg variant: </label>
+                <select id="valg-29" onchange="oppdaterKortPris(29)">
+                  <option value="Kylling/Scampi/Svinekjøtt" data-pris="199">
+                    Kylling / Scampi / Svinekjøtt (199,-)
+                  </option>
+                  <option value="Biff/And/Laks" data-pris="209">
+                    Biff / And / Laks (209,-)
+                  </option>
+                </select>
+              </div>
+              <button
+                class="btn-sm"
+                onclick="leggTilHovedrett(29, '29. Sursøt saus')"
+              >
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="hovedretter" id="kort-30">
+            <img
+              src="Nr.-30.jpg"
+              alt="Nr. 30 Panaeng karri"
+              class="rett-bilde"
+            />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>30. Panaeng karri</h3>
+                <span class="pris" id="pris-30">199,-</span>
+              </div>
+              <p class="allergener">Klassisk thailandsk panang-karri</p>
+              <div class="valg-container">
+                <label>Velg variant: </label>
+                <select id="valg-30" onchange="oppdaterKortPris(30)">
+                  <option value="Kylling/Scampi/Svinekjøtt" data-pris="199">
+                    Kylling / Scampi / Svinekjøtt (199,-)
+                  </option>
+                  <option value="Biff/And/Laks" data-pris="209">
+                    Biff / And / Laks (209,-)
+                  </option>
+                </select>
+              </div>
+              <button
+                class="btn-sm"
+                onclick="leggTilHovedrett(30, '30. Panaeng karri')"
+              >
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="hovedretter" id="kort-31">
+            <img src="Nr.-31.jpg" alt="Nr. 31 Rød karri" class="rett-bilde" />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>31. Rød karri</h3>
+                <span class="pris" id="pris-31">199,-</span>
+              </div>
+              <p class="allergener">Tradisjonell rød karri m/kokosmelk</p>
+              <div class="valg-container">
+                <label>Velg variant: </label>
+                <select id="valg-31" onchange="oppdaterKortPris(31)">
+                  <option value="Kylling/Scampi/Svinekjøtt" data-pris="199">
+                    Kylling / Scampi / Svinekjøtt (199,-)
+                  </option>
+                  <option value="Biff/And/Laks" data-pris="209">
+                    Biff / And / Laks (209,-)
+                  </option>
+                </select>
+              </div>
+              <button
+                class="btn-sm"
+                onclick="leggTilHovedrett(31, '31. Rød karri')"
+              >
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="hovedretter" id="kort-32">
+            <img src="Nr.-32.jpg" alt="Nr. 32 Grønn karri" class="rett-bilde" />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>32. Grønn karri</h3>
+                <span class="pris" id="pris-32">199,-</span>
+              </div>
+              <p class="allergener">Sterk og aromatisk grønn karri</p>
+              <div class="valg-container">
+                <label>Velg variant: </label>
+                <select id="valg-32" onchange="oppdaterKortPris(32)">
+                  <option value="Kylling/Scampi/Svinekjøtt" data-pris="199">
+                    Kylling / Scampi / Svinekjøtt (199,-)
+                  </option>
+                  <option value="Biff/And/Laks" data-pris="209">
+                    Biff / And / Laks (209,-)
+                  </option>
+                </select>
+              </div>
+              <button
+                class="btn-sm"
+                onclick="leggTilHovedrett(32, '32. Grønn karri')"
+              >
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="hovedretter" id="kort-33">
+            <img
+              src="Nr.-33.jpg"
+              alt="Nr. 33 Massaman karri"
+              class="rett-bilde"
+            />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>33. Massaman karri</h3>
+                <span class="pris" id="pris-33">199,-</span>
+              </div>
+              <p class="allergener">Allergener: Peanøtter</p>
+              <div class="valg-container">
+                <label>Velg variant: </label>
+                <select id="valg-33" onchange="oppdaterKortPris(33)">
+                  <option value="Kylling/Scampi/Svinekjøtt" data-pris="199">
+                    Kylling / Scampi / Svinekjøtt (199,-)
+                  </option>
+                  <option value="Biff/And/Laks" data-pris="209">
+                    Biff / And / Laks (209,-)
+                  </option>
+                </select>
+              </div>
+              <button
+                class="btn-sm"
+                onclick="leggTilHovedrett(33, '33. Massaman karri')"
+              >
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="hovedretter" id="kort-34">
+            <img
+              src="Nr.-34.jpg"
+              alt="Nr. 34 And i rødkarri"
+              class="rett-bilde"
+            />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>34. And i rødkarri</h3>
+                <span class="pris" id="pris-34">199,-</span>
+              </div>
+              <p class="allergener">Langtidskokt andefilet i fyldig rødkarri</p>
+              <div class="valg-container">
+                <label>Velg variant: </label>
+                <select id="valg-34" onchange="oppdaterKortPris(34)">
+                  <option value="Kylling/Scampi/Svinekjøtt" data-pris="199">
+                    Kylling / Scampi / Svinekjøtt (199,-)
+                  </option>
+                  <option value="Biff/And/Laks" data-pris="209">
+                    Biff / And / Laks (209,-)
+                  </option>
+                </select>
+              </div>
+              <button
+                class="btn-sm"
+                onclick="leggTilHovedrett(34, '34. And i rødkarri')"
+              >
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="hovedretter" id="kort-36">
+            <img
+              src="Nr.-36.jpg"
+              alt="Nr. 36 Chilipaste saus"
+              class="rett-bilde"
+            />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>36. Chilipaste saus</h3>
+                <span class="pris" id="pris-36">199,-</span>
+              </div>
+              <p class="allergener">
+                Allergener: Peanøtter, soya, hvete, bløtdyr
+              </p>
+              <div class="valg-container">
+                <label>Velg variant: </label>
+                <select id="valg-36" onchange="oppdaterKortPris(36)">
+                  <option value="Kylling/Scampi/Svinekjøtt" data-pris="199">
+                    Kylling / Scampi / Svinekjøtt (199,-)
+                  </option>
+                  <option value="Biff/And/Laks" data-pris="209">
+                    Biff / And / Laks (209,-)
+                  </option>
+                </select>
+              </div>
+              <button
+                class="btn-sm"
+                onclick="leggTilHovedrett(36, '36. Chilipaste saus')"
+              >
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="hovedretter" id="kort-37">
+            <img
+              src="Nr.-37.jpg"
+              alt="Nr. 37 Hvitløk og peppersaus"
+              class="rett-bilde"
+            />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>37. Hvitløk og peppersaus</h3>
+                <span class="pris" id="pris-37">199,-</span>
+              </div>
+              <p class="allergener">Allergener: Hvete</p>
+              <div class="valg-container">
+                <label>Velg variant: </label>
+                <select id="valg-37" onchange="oppdaterKortPris(37)">
+                  <option value="Kylling/Scampi/Svinekjøtt" data-pris="199">
+                    Kylling / Scampi / Svinekjøtt (199,-)
+                  </option>
+                  <option value="Biff/And/Laks" data-pris="209">
+                    Biff / And / Laks (209,-)
+                  </option>
+                </select>
+              </div>
+              <button
+                class="btn-sm"
+                onclick="leggTilHovedrett(37, '37. Hvitløk/peppersaus')"
+              >
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="hovedretter" id="kort-38">
+            <img src="Nr.-38.jpg" alt="Nr. 38 Østerssaus" class="rett-bilde" />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>38. Østerssaus</h3>
+                <span class="pris" id="pris-38">199,-</span>
+              </div>
+              <p class="allergener">Allergener: Hvete, soya, bløtdyr</p>
+              <div class="valg-container">
+                <label>Velg variant: </label>
+                <select id="valg-38" onchange="oppdaterKortPris(38)">
+                  <option value="Kylling/Scampi/Svinekjøtt" data-pris="199">
+                    Kylling / Scampi / Svinekjøtt (199,-)
+                  </option>
+                  <option value="Biff/And/Laks" data-pris="209">
+                    Biff / And / Laks (209,-)
+                  </option>
+                </select>
+              </div>
+              <button
+                class="btn-sm"
+                onclick="leggTilHovedrett(38, '38. Østerssaus')"
+              >
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="hovedretter" id="kort-39">
+            <img
+              src="Nr.-39.jpg"
+              alt="Nr. 39 Sprøstekt kylling"
+              class="rett-bilde"
+            />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>39. Sprøstekt kylling</h3>
+                <span class="pris" id="pris-39">199,-</span>
+              </div>
+              <p class="allergener">Allergener: Hvete, bløtdyr, peanøtter</p>
+              <div class="valg-container">
+                <label>Velg variant: </label>
+                <select id="valg-39" onchange="oppdaterKortPris(39)">
+                  <option value="Kylling/Scampi/Svinekjøtt" data-pris="199">
+                    Kylling / Scampi / Svinekjøtt (199,-)
+                  </option>
+                  <option value="Biff/And/Laks" data-pris="209">
+                    Biff / And / Laks (209,-)
+                  </option>
+                </select>
+              </div>
+              <button
+                class="btn-sm"
+                onclick="leggTilHovedrett(39, '39. Sprøstekt kylling')"
+              >
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="hovedretter">
+            <img src="Nr.-41.jpg" alt="Nr. 41 Tapas meny" class="rett-bilde" />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>41. Tapas meny</h3>
+                <span class="pris">219,-</span>
+              </div>
+              <p class="allergener">
+                Allergener: Hvete, skalldyr, peanøtter, soya, egg
+              </p>
+              <button class="btn-sm" onclick="leggTil('41. Tapas meny', 219)">
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="hovedretter" id="kort-42">
+            <img src="Nr.-42.jpg" alt="Nr. 42 Ingefær wok" class="rett-bilde" />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>42. Ingefær</h3>
+                <span class="pris" id="pris-42">199,-</span>
+              </div>
+              <p class="allergener">
+                Allergener: Hvete, bløtdyr, soya, selleri
+              </p>
+              <div class="valg-container">
+                <label>Velg variant: </label>
+                <select id="valg-42" onchange="oppdaterKortPris(42)">
+                  <option value="Kylling/Scampi/Svinekjøtt" data-pris="199">
+                    Kylling / Scampi / Svinekjøtt (199,-)
+                  </option>
+                  <option value="Biff/And/Laks" data-pris="209">
+                    Biff / And / Laks (209,-)
+                  </option>
+                </select>
+              </div>
+              <button
+                class="btn-sm"
+                onclick="leggTilHovedrett(42, '42. Ingefær')"
+              >
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="sunnere">
+            <img src="bilde-001.jpg" alt="001 Phla kai" class="rett-bilde" />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>001. Phla kai</h3>
+                <span class="pris">219,-</span>
+              </div>
+              <p>
+                Dampet kylling i sitrongress, lime, chilipaste og peanøtter.
+              </p>
+              <button class="btn-sm" onclick="leggTil('001. Phla kai', 219)">
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="sunnere">
+            <img src="bilde-002.jpg" alt="002 Lab kylling" class="rett-bilde" />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>002. Lab kylling</h3>
+                <span class="pris">219,-</span>
+              </div>
+              <p>Dampet kylling i fiskesaus, lime og koriander.</p>
+              <button class="btn-sm" onclick="leggTil('002. Lab kylling', 219)">
+                + Legg til
+              </button>
+            </div>
+          </div>
+
+          <div class="meny-kort" data-kategori="sunnere">
+            <img
+              src="bilde-003.jpg"
+              alt="003 Papaya salat"
+              class="rett-bilde"
+            />
+            <div class="rett-info">
+              <div class="rett-tittel">
+                <h3>003. Papaya salat med scampi</h3>
+                <span class="pris">219,-</span>
+              </div>
+              <p>Tradisjonell thailansk frisk papayasalat med scampi.</p>
+              <button
+                class="btn-sm"
+                onclick="leggTil('003. Papaya salat', 219)"
+              >
+                + Legg til
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="handlekurv-seksjon">
+        <div class="kurv-boks">
+          <h3>Din handlekurv</h3>
+          <div id="kurv-items">
+            <p class="tom-kurv">
+              Listen din er tom. Klikk "+ Legg til" på maten du ønsker.
+            </p>
+          </div>
+
+          <div class="kurv-totalt">
+            <span>Totalpris:</span>
+            <span id="total-pris">0,-</span>
+          </div>
+
+          <div class="ring-instruksjon" id="ring-boks" style="display: none">
+            <p>
+              <strong>Klar til å bestille?</strong> Ring oss nå og les opp
+              nummerne på skjermen:
+            </p>
+            <a href="tel:99246478" class="btn ring-btn">📞 Ring 992 46 478</a>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <script>
+      // --- Menyfiltrering ---
+      function filterMeny(kategori) {
+        const kort = document.querySelectorAll(".meny-kort");
+        const knapper = document.querySelectorAll(".filter-btn");
+        knapper.forEach((btn) => btn.classList.remove("active"));
+
+        if (event && event.target) {
+          event.target.classList.add("active");
+        }
+
+        kort.forEach((item) => {
+          if (
+            kategori === "alle" ||
+            item.getAttribute("data-kategori") === kategori
+          ) {
+            item.style.display = "flex";
+          } else {
+            item.style.display = "none";
+          }
+        });
+      }
+
+      // --- Dynamisk prisoppdatering i HTML-visning ---
+      function oppdaterKortPris(id) {
+        const select = document.getElementById("valg-" + id);
+        const prisVisning = document.getElementById("pris-" + id);
+        const valgtOption = select.options[select.selectedIndex];
+        const nyPris = valgtOption.getAttribute("data-pris");
+        prisVisning.innerText = nyPris + ",-";
+      }
+
+      // --- Hjelpefunksjon for å legge til rett med valgt kjøttype og pris ---
+      function leggTilHovedrett(id, baseNavn) {
+        const select = document.getElementById("valg-" + id);
+        const valgtOption = select.options[select.selectedIndex];
+        const kjottVariant = valgtOption.value;
+        const pris = parseInt(valgtOption.getAttribute("data-pris"));
+
+        // Setter sammen et tydelig navn til handlekurven, f.eks: "23. Basilikum saus (Biff/And/Laks)"
+        const fulltNavn = `${baseNavn} (${kjottVariant})`;
+        leggTil(fulltNavn, pris);
+      }
+
+      // --- Handlekurv med LocalStorage og Priskalkulering ---
+      let kurv = [];
+
+      window.onload = function () {
+        const lagretKurv = localStorage.getItem("thaikarri_kurv");
+        if (lagretKurv) {
+          kurv = JSON.parse(lagretKurv);
+          oppdaterKurv();
+        }
+      };
+
+      function leggTil(navn, pris) {
+        const eksisterer = kurv.find((item) => item.navn === navn);
+        if (eksisterer) {
+          eksisterer.antall += 1;
+        } else {
+          kurv.push({ navn: navn, pris: pris, antall: 1 });
+        }
+        lagreOgOppdater();
+      }
+
+      function endreAntall(navn, endring) {
+        const item = kurv.find((item) => item.navn === navn);
+        if (item) {
+          item.antall += endring;
+          if (item.antall <= 0) {
+            kurv = kurv.filter((i) => i.navn !== navn);
+          }
+          lagreOgOppdater();
+        }
+      }
+
+      function lagreOgOppdater() {
+        localStorage.setItem("thaikarri_kurv", JSON.stringify(kurv));
+        oppdaterKurv();
+      }
+
+      function oppdaterKurv() {
+        const container = document.getElementById("kurv-items");
+        const totaltElement = document.getElementById("total-pris");
+        const ringBoks = document.getElementById("ring-boks");
+
+        if (kurv.length === 0) {
+          container.innerHTML =
+            '<p class="tom-kurv">Listen din er tom. Klikk "+ Legg til" på maten du ønsker.</p>';
+          totaltElement.innerText = "0,-";
+          ringBoks.style.display = "none";
+          return;
+        }
+
+        container.innerHTML = "";
+        let sum = 0;
+
+        kurv.forEach((item) => {
+          sum += item.pris * item.antall;
+          const rad = document.createElement("div");
+          rad.className = "kurv-item";
+          rad.innerHTML = `
+                    <div class="kurv-venstre">
+                        <span class="kvantitet">${item.antall}x</span>
+                        <span>${item.navn}</span>
+                    </div>
+                    <div class="kurv-hoyre">
+                        <span>${item.pris * item.antall},-</span>
+                        <div class="kurv-kontroller">
+                            <button onclick="endreAntall('${item.navn}', -1)">-</button>
+                            <button onclick="leggTil('${item.navn}', ${item.pris})">+</button>
+                        </div>
+                    </div>
+                `;
+          container.appendChild(rad);
+        });
+
+        totaltElement.innerText = sum + ",-";
+        ringBoks.style.display = "block";
+      }
+    </script>
+  </body>
+</html>

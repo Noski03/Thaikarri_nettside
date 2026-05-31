@@ -1,0 +1,248 @@
+/* --- Hovedoppsett for catering-siden --- */
+.catering-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  color: #333;
+}
+
+/* Seksjonstitler og prisinfo */
+.catering-hoved h2,
+.kart-seksjon h2 {
+  text-align: center;
+  color: #8b2626; /* Fin rød-tone som matcher thaimat-stilen */
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.pris-info {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Telefonknapper og kontakt */
+.kontakt-bokser {
+  text-align: center;
+  margin-bottom: 40px;
+  background-color: #fcfbf9;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.tlf-knapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.tlf-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.tlf-link:hover {
+  background-color: #0066cc;
+  color: #fff;
+  border-color: #0066cc;
+}
+
+/* --- Tapas-kortet (Flexbox-magien) --- */
+.tapas-meny-kort {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 60px;
+}
+
+/* Venstresiden med tekst */
+.tapas-tekst {
+  flex: 1; /* Tar opp resten av plassen på venstre side */
+}
+
+.tapas-tekst h3 {
+  font-size: 1.6rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.tapas-ingredienser {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.allergener {
+  font-size: 0.95rem;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 25px;
+}
+
+.avtale-info {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-left: 4px solid #8b2626;
+  border-radius: 0 4px 4px 0;
+}
+
+.avtale-info p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Høyresiden med bildegalleriet */
+.tapas-bilder-galleri {
+  display: flex;
+  flex-direction: column; /* Stabler bildene oppå hverandre */
+  gap: 15px;
+  width: 200px; /* Bestemmer bredden på bildekolonnen */
+  flex-shrink: 0; /* Hindrer bildene i å bli klemt flate */
+}
+
+.tapas-bilder-galleri img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover; /* Sørger for at bildene fyller ut boksen pent uten å bli strukket */
+  border-radius: 12px; /* De fine runde hjørnene fra bildet ditt */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Kart-seksjonen --- */
+.adresse-tekst {
+  text-align: center;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.kart-wrapper {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden; /* Sørger for at selve kartet også får runde hjørner */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background-color: #eee;
+}
+
+/* --- Responsivt design (for mobilskjermer) --- */
+@media (max-width: 768px) {
+  .tapas-meny-kort {
+    flex-direction: column; /* Flytter bildene under teksten på mobil */
+  }
+
+  .tapas-bilder-galleri {
+    width: 100%; /* Bildene tar full bredde på mobil */
+    flex-direction: row; /* Legger bildene ved siden av hverandre på mobil istedenfor */
+    overflow-x: auto; /* Lar kunden scrolle sidelengs hvis det ikke er plass */
+  }
+
+  .tapas-bilder-galleri img {
+    width: 31%;
+    height: 100px;
+  }
+
+  .tlf-knapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+/* --- Slik bestiller du seksjonen --- */
+.bestilling-info-seksjon {
+  margin-bottom: 60px;
+}
+
+.steg-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.steg-boks {
+  flex: 1;
+  background-color: #fcfbf9;
+  padding: 25px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.steg-tall {
+  width: 40px;
+  height: 40px;
+  background-color: #8b2626;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0 auto 15px auto;
+}
+
+.steg-boks h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  color: #111;
+}
+
+.steg-boks p {
+  margin: 0;
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Gjør det mobiltilpasset */
+@media (max-width: 768px) {
+  .steg-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+.pris-tag {
+  font-size: 1.1rem;
+  color: #8b2626;
+  margin-bottom: 15px;
+}
+
+.annen-catering-boks {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid #8b2626;
+  margin-bottom: 60px;
+}
+
+.annen-catering-boks h3 {
+  font-size: 1.4rem;
+  color: #111;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.annen-catering-boks p {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}

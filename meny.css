@@ -1,0 +1,392 @@
+.meny-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.meny-container h2 {
+  text-align: center;
+  color: var(--kontrast-rod);
+  font-size: 32px;
+}
+
+.meny-info {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.filter-tags {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.filter-btn {
+  background-color: var(--hvit);
+  border: 1px solid #ddd;
+  padding: 8px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background-color: var(--kontrast-rod);
+  color: var(--hvit);
+  border-color: var(--kontrast-rod);
+}
+
+/* Meny Kort-oppsett */
+.meny-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* To kolonner på PC */
+  gap: 30px;
+}
+
+.meny-kort {
+  background: var(--hvit);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex; /* Bilde på venstre side, tekst på høyre */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.rett-bilde {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+}
+
+.rett-info {
+  padding: 20px;
+  flex: 1;
+}
+
+.rett-tittel {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.rett-tittel h3 {
+  font-size: 18px;
+  color: var(--tekst-mork);
+}
+
+.pris {
+  font-weight: bold;
+  color: var(--kontrast-rod);
+}
+
+/* Responsivt design for mobil */
+@media (max-width: 768px) {
+  .meny-grid {
+    grid-template-columns: 1fr;
+  }
+  .meny-kort {
+    flex-direction: column;
+  }
+  .rett-bilde {
+    width: 100%;
+    height: 180px;
+  }
+}
+/* --- LAYOUT FOR MENYSIDEN --- */
+.meny-layout {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 40px;
+}
+
+.meny-seksjon {
+  flex: 2; /* Tar mest plass */
+}
+
+.meny-seksjon h2 {
+  color: var(--kontrast-rod);
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.meny-info {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Filter og Kort */
+.filter-tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.filter-btn {
+  background-color: var(--hvit);
+  border: 1px solid #ddd;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.filter-btn.active {
+  background-color: var(--kontrast-rod);
+  color: var(--hvit);
+  border-color: var(--kontrast-rod);
+}
+
+.meny-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Enkel kolonne for ryddighet */
+  gap: 20px;
+}
+
+.meny-kort {
+  background: var(--hvit);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.rett-bilde {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+}
+
+.rett-info {
+  padding: 15px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.rett-tittel {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.rett-tittel h3 {
+  font-size: 18px;
+}
+
+.pris {
+  font-weight: bold;
+  color: var(--kontrast-rod);
+}
+
+/* Liten knapp for å legge til */
+.btn-sm {
+  background-color: transparent;
+  border: 1px solid var(--kontrast-rod);
+  color: var(--kontrast-rod);
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  align-self: flex-start;
+  margin-top: 10px;
+  transition: all 0.2s;
+}
+
+.btn-sm:hover {
+  background-color: var(--kontrast-rod);
+  color: var(--hvit);
+}
+
+/* --- HØYRE SIDE: HANDLEKURV / RINGELISTE --- */
+.handlekurv-seksjon {
+  flex: 1;
+}
+
+.kurv-boks {
+  background-color: var(--hvit);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  position: sticky;
+  top: 100px; /* Holder seg på skjermen når man scroller */
+}
+
+.kurv-boks h3 {
+  border-bottom: 2px solid var(--bakgrunn);
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  color: var(--tekst-mork);
+}
+
+.tom-kurv {
+  color: #888;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.kurv-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px dashed #eee;
+}
+
+.kurv-antall {
+  color: var(--kontrast-rod);
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.slett-btn {
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.slett-btn:hover {
+  color: var(--kontrast-rod);
+}
+
+.kurv-totalt {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 2px solid var(--bakgrunn);
+}
+
+.ring-instruksjon {
+  margin-top: 25px;
+  background-color: #fff9f0;
+  padding: 15px;
+  border-radius: 6px;
+  border-left: 4px solid var(--kontrast-gull);
+  font-size: 14px;
+}
+
+.ring-btn {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  background-color: #27ae60; /* Grønn ringeknapp føles naturlig for action */
+}
+
+.ring-btn:hover {
+  background-color: #219653;
+}
+
+/* --- MOBIL-TILPASNING --- */
+@media (max-width: 768px) {
+  .meny-layout {
+    flex-direction: column;
+  }
+  .handlekurv-seksjon {
+    order: -1; /* Legger handlekurven ØVERST på mobil så de ser hva de velger */
+  }
+  .kurv-boks {
+    position: static;
+  }
+}
+/* Erstatt eller legg til dette i meny.css */
+.meny-layout {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 35px;
+}
+
+.meny-seksjon {
+  flex: 2;
+}
+.handlekurv-seksjon {
+  flex: 1;
+}
+
+.meny-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.meny-kort {
+  background: var(--hvit);
+  border-radius: 8px;
+  padding: 20px;
+  border-left: 5px solid var(--kontrast-gull); /* Gul stripe gjør det mer levende */
+  box-shadow: 0 2px 8px rgba(44, 37, 32, 0.04); /* Myk, organisk skygge */
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.meny-kort:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(44, 37, 32, 0.08);
+}
+
+.rett-tittel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: var(--tekst-mork);
+}
+
+.rett-info p {
+  color: #61554d;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+/* Kurv elementer og justeringsknapper */
+.kurv-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f1ece6;
+}
+
+.kurv-venstre {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.kvantitet {
+  color: var(--kontrast-rod);
+  font-weight: bold;
+}
+
+.kurv-hoyre {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.kurv-kontroller button {
+  background: #f1ece6;
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.kurv-kontroller button:hover {
+  background: var(--kontrast-gull);
+  color: white;
+}
