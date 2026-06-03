@@ -16,10 +16,17 @@
             <h1>THAIKARRI</h1>
           </div>
         </a>
-        <ul class="nav-links">
+
+        <div class="hamburger" id="hamburger-btn" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
           <li><a href="index.html">Hjem</a></li>
           <li><a href="meny.html">Meny & Bestilling</a></li>
-          <li><a href="catering.html">Catering</a></li>
+          <li><a href="catering.html">Catering & Kontakt</a></li>
         </ul>
       </nav>
     </header>
@@ -1077,6 +1084,12 @@
 
         totaltElement.innerText = sum + ",-";
         ringBoks.style.display = "block";
+      }
+    </script>
+    <script>
+      function toggleMenu() {
+        const nav = document.getElementById("nav-links");
+        nav.classList.toggle("active");
       }
     </script>
   </body>

@@ -129,3 +129,78 @@ footer {
   border-top: 1px solid #453c35;
   font-size: 14px;
 }
+/* --- HAMBURGERMENY STANDARD (Skjult på PC) --- */
+header {
+  position: relative;
+  background-color: #fff;
+  z-index: 100;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background-color: #8b2626; /* Thaikarri-rødfargen */
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* --- MOBILVERSJON FOR ALLE SIDER --- */
+@media (max-width: 768px) {
+  /* Viser hamburger-knappen */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Skjuler den vanlige menyen og gjør den om til en drop-down */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* Legger seg rett under headeren */
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    text-align: center;
+    margin: 0;
+  }
+
+  /* Denne slår inn når knappen trykkes (takket være JavaScripten) */
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 15px 0;
+  }
+
+  /* Fikser oppsettet på selve meny-siden */
+  .meny-layout {
+    flex-direction: column; /* Legger handlekurven UNDER maten på mobil */
+  }
+
+  .meny-grid {
+    grid-template-columns: 1fr; /* 1 kolonne med mat på små skjermer (ikke 2 eller 3) */
+    gap: 20px;
+  }
+
+  /* Fikser filter-knappene så de kan rulles bortover på mobil */
+  .filter-tags {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+
+  .filter-btn {
+    white-space: nowrap;
+  }
+}
