@@ -204,3 +204,20 @@ header {
     white-space: nowrap;
   }
 }
+
+/* --- CREDITS --- */
+.northweb-credit {
+  color: #00e5ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition:
+    text-shadow 0.3s ease,
+    color 0.3s ease;
+}
+
+.northweb-credit:hover {
+  color: #90f4ff;
+  text-shadow:
+    0 0 5px #00e5ff,
+    0 0 10px #00e5ff;
+}
